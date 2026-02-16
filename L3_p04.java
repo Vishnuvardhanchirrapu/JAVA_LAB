@@ -1,12 +1,10 @@
 // Abstraction in java
 abstract class WildAnimals{
 	abstract public void sound();
+	abstract public void behave();
 }
-abstract class Lion extends WildAnimals{
+ class Lion extends WildAnimals{
 
-    abstract public void behave();
-}
-class L3_p04 extends Lion{
 	@Override
 	public void sound(){
 	System.out.println("Tiger sound");
@@ -15,9 +13,12 @@ class L3_p04 extends Lion{
        public void behave(){
 	System.out.println("aggressive");
 	}
+   
+}
+public class Main {
 	public static void main(String[] args){
 	System.out.println("Tiger class:");
-	Tiger t=new Tiger();
+	Lion t=new Lion();
 	t.sound();
 	t.behave();
 
