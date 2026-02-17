@@ -1,12 +1,12 @@
 import java.util.Scanner;
-import java.util.*;
 class AgeException extends Exception{
     public AgeException(String msg){
-        super(msg);
+        // super(msg);
+        System.out.println(msg);
     }
 }
-class Main{
-    public static void main(String...args){
+class Demo_30{
+    public static void main(String...args) {
         Scanner sc = new Scanner(System.in);
         String str = "Sorry u r not permitted for voting,since your age is below 18";
         try{
@@ -21,6 +21,9 @@ class Main{
         }
         catch(AgeException ec){
             System.out.println(ec.getMessage());
+        }
+        finally{
+            System.out.println("Exception Handled!!!");
         }
     }
 }
